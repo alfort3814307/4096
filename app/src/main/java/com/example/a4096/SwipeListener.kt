@@ -5,7 +5,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.View.OnTouchListener
 
-class SwipeListener: OnTouchListener {
+class SwipeListener(private val listener: Listener): OnTouchListener {
     private var startX: Float = 0.0f
     private var startY: Float = 0.0f
 
@@ -25,22 +25,26 @@ class SwipeListener: OnTouchListener {
                 // 移動距離が100px以上だったらスワイプしたと判断
                 if (distanceX > 100) {
                     // 右
+                    listener.onSwipe("RIGHT")
                 }
                 else if (distanceX < -100) {
                     // 左
+                    listener.onSwipe("LEFT")
                 }
                 else if (distanceY > 100) {
                     // 下
+                    listener.onSwipe("DOWN")
                 }
                 else if (distanceY < -100) {
                     // 上
+                    listener.onSwipe("UP")
                 }
             }
         }
         return true
     }
 
-    private fun onSwipe() {
-        
+    interface Listener {
+        fun onSwipe(swipe: String)
     }
 }
