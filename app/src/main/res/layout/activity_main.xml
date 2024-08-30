@@ -2,172 +2,45 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/panel9"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="32dp"
-        android:background="@drawable/border"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/panel5"
-        app:srcCompat="?attr/actionModeCutDrawable" />
-
-    <ImageView
-        android:id="@+id/panel13"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="32dp"
-        android:background="@drawable/border"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/panel9"
-        app:srcCompat="?attr/actionModeCutDrawable" />
-
-    <ImageView
-        android:id="@+id/panel14"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/border"
-        app:layout_constraintStart_toEndOf="@+id/panel13"
-        app:layout_constraintTop_toBottomOf="@+id/panel10"
-        app:srcCompat="?attr/actionModeCutDrawable" />
-
-    <ImageView
-        android:id="@+id/panel12"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/border"
-        app:layout_constraintStart_toEndOf="@+id/panel11"
-        app:layout_constraintTop_toBottomOf="@+id/panel8"
-        app:srcCompat="?attr/actionModeCutDrawable" />
-
-    <ImageView
-        android:id="@+id/panel16"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/border"
-        app:layout_constraintStart_toEndOf="@+id/panel15"
-        app:layout_constraintTop_toBottomOf="@+id/panel12"
-        app:srcCompat="?attr/actionModeCutDrawable" />
-
-    <ImageView
-        android:id="@+id/panel15"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/border"
-        app:layout_constraintStart_toEndOf="@+id/panel14"
-        app:layout_constraintTop_toBottomOf="@+id/panel11"
-        app:srcCompat="?attr/actionModeCutDrawable" />
-
-    <ImageView
-        android:id="@+id/panel11"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/border"
-        app:layout_constraintStart_toEndOf="@+id/panel10"
-        app:layout_constraintTop_toBottomOf="@+id/panel7"
-        app:srcCompat="?attr/actionModeCutDrawable" />
-
-    <ImageView
-        android:id="@+id/panel10"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/border"
-        app:layout_constraintStart_toEndOf="@+id/panel9"
-        app:layout_constraintTop_toBottomOf="@+id/panel6"
-        app:srcCompat="?attr/actionModeCutDrawable" />
-
-    <ImageView
-        android:id="@+id/panel7"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/border"
-        app:layout_constraintStart_toEndOf="@+id/panel6"
-        app:layout_constraintTop_toBottomOf="@+id/panel4"
-        app:srcCompat="?attr/actionModeCutDrawable" />
-
-    <ImageView
-        android:id="@+id/panel5"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="32dp"
-        android:background="@drawable/border"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/panel1"
-        app:srcCompat="?attr/actionModeCutDrawable" />
-
-    <ImageView
-        android:id="@+id/panel6"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/border"
-        app:layout_constraintStart_toEndOf="@+id/panel5"
-        app:layout_constraintTop_toBottomOf="@+id/panel3"
-        app:srcCompat="?attr/actionModeCutDrawable" />
-
-    <ImageView
-        android:id="@+id/panel8"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/border"
-        app:layout_constraintStart_toEndOf="@+id/panel7"
-        app:layout_constraintTop_toBottomOf="@+id/panel4"
-        app:srcCompat="?attr/actionModeCutDrawable" />
+    <LinearLayout
+        android:id="@+id/contentsPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="249dp"
-        android:layout_height="18dp"
-        android:text="Hello World!"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:gravity="right"
+        android:text="0"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.224"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.060000002" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="@string/score_label"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.088" />
-
-    <ImageView
-        android:id="@+id/panel4"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/border"
-        app:layout_constraintStart_toEndOf="@+id/panel3"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="?attr/actionModeCutDrawable" />
-
-    <ImageView
-        android:id="@+id/panel1"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/border"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="?attr/actionModeCutDrawable" />
-
-    <ImageView
-        android:id="@+id/panel3"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/border"
-        app:layout_constraintStart_toEndOf="@+id/panel2"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="?attr/actionModeCutDrawable" />
-
-    <ImageView
-        android:id="@+id/panel2"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/border"
-        app:layout_constraintStart_toEndOf="@+id/panel1"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="?attr/actionModeCutDrawable" />
+        app:layout_constraintVertical_bias="0.060000002" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
