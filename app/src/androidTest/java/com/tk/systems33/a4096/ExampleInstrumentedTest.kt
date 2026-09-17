@@ -1,4 +1,4 @@
-package com.example.a4096
+package com.tk.systems33.a4096
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
